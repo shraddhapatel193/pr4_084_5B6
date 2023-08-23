@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginMainActivity2">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/guni_pink_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/loginimg"/>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/card_view"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintTop_toBottomOf="@id/loginimg">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email_id"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textSize="18sp"
+                        android:id="@+id/l_text_email"
+                        app:layout_constraintEnd_toStartOf="@id/l_edit_email"
+                        app:layout_constraintBaseline_toBaselineOf="@id/l_edit_email"
+                        />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/l_text_email"
+                        android:hint="Enter Email Id"
+                        android:inputType="textEmailAddress"
+                        android:textSize="20sp"
+                        android:ems="10"
+                        app:layout_constraintBaseline_toBaselineOf="@id/l_text_email"
+                        android:id="@+id/l_edit_email"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Password"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/l_text_email"
+                        android:id="@+id/l_text_pass"
+                        android:layout_marginVertical="20dp"
+                        app:layout_constraintEnd_toStartOf="@id/l_edit_pass"
+                        app:layout_constraintBaseline_toBaselineOf="@id/l_edit_pass"
+                        />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/l_edit_email"
+                        app:layout_constraintStart_toEndOf="@id/l_text_pass"
+                        android:hint="Enter Password"
+                        android:inputType="numberPassword"
+                        android:textSize="20sp"
+                        android:ems="10"
+                        android:id="@+id/l_edit_pass"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="forget Password??"
+                        android:layout_margin="20dp"
+                        android:paddingBottom="50dp"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@id/l_text_pass"
+                        app:layout_constraintHorizontal_bias="0.11"
+                        android:id="@+id/l_forget_pass"
+                        />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Login"
+                        android:id="@+id/l_btn_login"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/l_forget_pass"
+                        android:textColor="#FFFFFF"
+                        android:paddingHorizontal="15dp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/didnotacc"
+                android:text="dont_have_an_account??"
+                android:textSize="18sp"
+                android:layout_margin="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/didnotacc"
+                app:layout_constraintHorizontal_bias="0.11"
+                android:paddingHorizontal="50dp"
+                app:layout_constraintTop_toBottomOf="@id/card_view"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:id="@+id/l_signup"
+                android:text="sign_up"
+                android:textStyle="bold"
+                android:backgroundTint="#FFFF"
+                android:textColor="#db3d91"
+                app:layout_constraintBaseline_toBaselineOf="@+id/didnotacc"
+                app:layout_constraintStart_toEndOf="@id/didnotacc"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
